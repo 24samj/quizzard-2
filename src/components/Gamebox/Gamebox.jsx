@@ -2,7 +2,7 @@ import "./Gamebox.css";
 
 const Gamebox = ({
     currentQuestionNumber,
-    questionBank,
+    questionSet,
     selectedOption,
     setSelectedOption,
     handleQuestionChange,
@@ -11,11 +11,11 @@ const Gamebox = ({
     return (
         <div className="game-container">
             <div className="current-question">
-                {questionBank[0].questions[currentQuestionNumber].question}
+                {questionSet.questions[currentQuestionNumber].question}
             </div>
             <h2>Options:</h2>
             <div className="options-container" key={currentQuestionNumber}>
-                {questionBank[0].questions[currentQuestionNumber].options.map(
+                {questionSet.questions[currentQuestionNumber].options.map(
                     (option, index) => (
                         <label
                             className={

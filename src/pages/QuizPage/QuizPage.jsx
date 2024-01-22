@@ -12,6 +12,13 @@ const QuizPage = () => {
     const [selectedOption, setSelectedOption] = useState(null);
     const [currentScore, setCurrentScore] = useState(0);
     const [timeLeft, setTimeLeft] = useState(30000);
+    const [questionSet, setQuestionSet] = useState(null);
+
+    useEffect(() => {
+        setQuestionSet(
+            questionBank[Math.floor(Math.random() * questionBank.length)]
+        );
+    }, []);
 
     const handleQuestionChange = () => {
         if (currentQuestionNumber < 4) {
@@ -20,7 +27,7 @@ const QuizPage = () => {
             setQuizSubmitted(true);
             setGameStarted(false);
         }
-        if (questionBank[0].answers[currentQuestionNumber] === selectedOption) {
+        if (questionSet.answers[currentQuestionNumber] === selectedOption) {
             setCurrentScore(currentScore + 1);
         }
         setTimeLeft(30000);
@@ -47,7 +54,7 @@ const QuizPage = () => {
             {gameStarted && !quizSubmitted && (
                 <Gamebox
                     currentQuestionNumber={currentQuestionNumber}
-                    questionBank={questionBank}
+                    questionSet={questionSet}
                     selectedOption={selectedOption}
                     setSelectedOption={setSelectedOption}
                     handleQuestionChange={handleQuestionChange}
