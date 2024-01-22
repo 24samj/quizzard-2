@@ -11,6 +11,7 @@ const Gamebox = ({
     return (
         <div className="game-container">
             <div className="current-question">
+                Q{currentQuestionNumber + 1}.{" "}
                 {questionSet.questions[currentQuestionNumber].question}
             </div>
             <h2>Options:</h2>
@@ -37,10 +38,10 @@ const Gamebox = ({
                 )}
             </div>
             <div className="game-footer">
-                <h3>{currentQuestionNumber + 1}/5</h3>
                 <button onClick={handleQuestionChange}>
                     {currentQuestionNumber < 4 ? "Next" : "Submit"}
                 </button>
+                <h3>{currentQuestionNumber + 1}/5</h3>
             </div>
             <div
                 className="timebar"

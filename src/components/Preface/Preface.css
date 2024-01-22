@@ -1,7 +1,7 @@
 .preface-container {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 80%;
     margin-top: 7rem;
     padding: 2rem;
     border: 2px solid orange;
@@ -41,4 +41,11 @@
 .begin-btn-container {
     display: flex;
     justify-content: center;
+}
+
+/* Media query for devices with width 768px and above */
+@media (min-width: 768px) {
+    .preface-container {
+        width: 30%;
+    }
 }

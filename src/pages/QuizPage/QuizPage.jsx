@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import "./QuizPage.css";
 import { questionBank } from "../../constants/questionBank";
 import Preface from "../../components/Preface/Preface";
 import Gamebox from "../../components/Gamebox/Gamebox";
 import Results from "../../components/Results/Results";
+import "./QuizPage.css";
 
 const QuizPage = () => {
     const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);

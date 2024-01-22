@@ -1,7 +1,7 @@
 .intro-container {
     color: white;
     margin: 50px;
-    width: 30rem;
+    width: 80%;
     margin-top: 170px;
 }
 
@@ -24,4 +24,11 @@
 }
 .btn-container button:hover {
     scale: 1.05;
+}
+
+/* Media query for devices with width 768px and above */
+@media (min-width: 768px) {
+    .intro-container {
+        width: 30rem;
+    }
 }
