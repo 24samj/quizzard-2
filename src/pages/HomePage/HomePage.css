@@ -1,0 +1,27 @@
+.intro-container {
+    color: white;
+    margin: 50px;
+    width: 30rem;
+    margin-top: 170px;
+}
+
+.intro-container h2,
+.intro-container p {
+    margin-bottom: 50px;
+}
+
+.btn-container button {
+    height: 60px;
+    width: 150px;
+    background-color: rgb(58, 20, 125);
+    margin-right: 50px;
+    border: 1px solid orange;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s all ease;
+    font-weight: 800;
+}
+.btn-container button:hover {
+    scale: 1.05;
+}

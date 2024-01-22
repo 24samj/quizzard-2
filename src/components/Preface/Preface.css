@@ -1,0 +1,31 @@
+.preface-container {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    margin-top: 20vh;
+    border: 2px solid orange;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.preface-container p,
+.preface-container h3,
+.preface-container ul {
+    margin-bottom: 30px;
+}
+
+.preface-container button {
+    height: 60px;
+    width: 150px;
+    background-color: rgb(58, 20, 125);
+    margin-right: 50px;
+    border: 1px solid orange;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+.preface-container button:hover {
+    scale: 1.05;
+}

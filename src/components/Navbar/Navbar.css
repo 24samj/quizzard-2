@@ -1,0 +1,18 @@
+.navbar-container {
+    height: 50px;
+    width: 100%;
+    background-image: linear-gradient(rgb(18, 39, 89), rgb(26, 9, 56));
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    margin: 50px;
+    color: white;
+    font-weight: 800;
+    transition: 0.2s all ease;
+}
+.logo-text:hover {
+    letter-spacing: 1px;
+    cursor: pointer;
+}
