@@ -4,37 +4,3 @@
     align-items: center;
     color: white;
 }
-
-.results-container {
-    text-align: center;
-}
-
-.results-header {
-    margin-bottom: 2rem;
-    font-weight: 800;
-    font-size: 48px;
-}
-
-.score-container {
-    margin-top: 1rem;
-    font-size: 40px;
-}
-
-.score-container h1 {
-    margin: 3rem;
-}
-
-.results-container button {
-    height: 60px;
-    width: 150px;
-    background-color: rgb(58, 20, 125);
-    border: 1px solid orange;
-    border-radius: 15px;
-    font-size: 16px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.2s all ease;
-}
-.results-container button:hover {
-    scale: 1.05;
-}
