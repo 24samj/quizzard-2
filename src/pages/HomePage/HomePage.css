@@ -1,7 +1,7 @@
 .intro-container {
-    color: white;
+    color: var(--main-text-color);
     margin: 50px;
-    width: 80%;
+    width: 30rem;
     margin-top: 170px;
 }
 
@@ -13,9 +13,10 @@
 .btn-container button {
     height: 60px;
     width: 150px;
-    background-color: rgb(58, 20, 125);
+    color: var(--main-text-color);
+    background-color: var(--main-btn-bg-color);
     margin-right: 50px;
-    border: 1px solid orange;
+    border: 1px solid var(--main-border-color);
     border-radius: 15px;
     font-size: 16px;
     cursor: pointer;
@@ -27,8 +28,18 @@
 }
 
 /* Media query for devices with width 768px and above */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .intro-container {
-        width: 30rem;
+        width: 80%;
+    }
+
+    .intro-container {
+        text-align: justify;
+    }
+
+    .btn-container button {
+        width: 100%;
+        margin-bottom: 3rem;
+        margin-right: 0;
     }
 }

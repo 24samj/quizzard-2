@@ -61,7 +61,15 @@ const QuizPage = () => {
                     timeLeft={timeLeft}
                 />
             )}
-            {quizSubmitted && <Results currentScore={currentScore} />}
+            {quizSubmitted && (
+                <Results
+                    currentScore={currentScore}
+                    setCurrentScore={setCurrentScore}
+                    setCurrentQuestionNumber={setCurrentQuestionNumber}
+                    setQuizSubmitted={setQuizSubmitted}
+                    setGameStarted={setGameStarted}
+                />
+            )}
         </div>
     );
 };

@@ -32,7 +32,7 @@ const Gamebox = ({
                                     setSelectedOption(e.target.value)
                                 }
                             />
-                            {option}
+                            <span>{option}</span>
                         </label>
                     )
                 )}

@@ -1,18 +1,43 @@
 .navbar-container {
     height: 50px;
     width: 100%;
-    background-image: linear-gradient(rgb(18, 39, 89), rgb(26, 9, 56));
+    background-image: linear-gradient(
+        var(--secondary-bg-color),
+        var(--main-bg-color)
+    );
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo-text {
-    margin: 50px;
-    color: white;
+    color: var(--main-text-color);
     font-weight: 800;
     transition: 0.2s all ease;
+    margin-left: 50px;
+
+    user-select: none;
+    -webkit-user-select: none; /* Chrome, Safari and Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE and Edge */
 }
 .logo-text:hover {
     letter-spacing: 1px;
     cursor: pointer;
+}
+
+.theme-btn {
+    color: var(--main-text-color);
+    margin-right: 50px;
+    cursor: pointer;
+    transition: 0.2s all ease;
+
+    user-select: none;
+    -webkit-user-select: none; /* Chrome, Safari and Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE and Edge */
+}
+.theme-btn:hover {
+    scale: 1.1;
+    rotate: 90deg;
 }

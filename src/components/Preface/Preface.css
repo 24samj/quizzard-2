@@ -1,11 +1,12 @@
 .preface-container {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 30%;
     margin-top: 7rem;
     padding: 2rem;
-    border: 2px solid orange;
+    border: 2px solid var(--main-border-color);
     border-radius: 20px;
+    color: var(--main-text-color);
 }
 
 .preface-container p,
@@ -25,8 +26,9 @@
 .preface-container button {
     height: 60px;
     width: 150px;
-    background-color: rgb(58, 20, 125);
-    border: 1px solid orange;
+    color: var(--main-text-color);
+    background-color: var(--main-btn-bg-color);
+    border: 1px solid var(--main-border-color);
     border-radius: 15px;
     font-size: 20px;
     font-weight: 800;
@@ -44,8 +46,8 @@
 }
 
 /* Media query for devices with width 768px and above */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .preface-container {
-        width: 30%;
+        width: 80%;
     }
 }

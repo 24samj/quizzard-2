@@ -1,8 +1,20 @@
 import { useNavigate } from "react-router-dom";
 import "./Results.css";
 
-const Results = ({ currentScore }) => {
+const Results = ({
+    currentScore,
+    setCurrentScore,
+    setCurrentQuestionNumber,
+    setQuizSubmitted,
+    setGameStarted,
+}) => {
     const navigate = useNavigate();
+    const handleReset = () => {
+        setCurrentQuestionNumber(0);
+        setCurrentScore(0);
+        setQuizSubmitted(false);
+        setGameStarted(true);
+    };
     return (
         <div className="results-container">
             <h1 className="results-header">Results</h1>
@@ -17,7 +29,10 @@ const Results = ({ currentScore }) => {
                 <span>Your Score:</span>
                 <h1>{currentScore}/5</h1>
             </div>
-            <button onClick={() => navigate("/")}>Go Back Home</button>
+            <div className="btns-container">
+                <button onClick={() => handleReset()}>Play Again</button>
+                <button onClick={() => navigate("/")}>Go Back Home</button>
+            </div>
         </div>
     );
 };
