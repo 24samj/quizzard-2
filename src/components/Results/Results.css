@@ -27,7 +27,7 @@
 .btns-container {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .results-container button {
@@ -43,7 +43,7 @@
     transition: 0.2s all ease;
 }
 .results-container button:hover {
-    transform: scale(1.05);
+    scale: 1.05;
 }
 
 /* Media query for devices with width 768px and above */

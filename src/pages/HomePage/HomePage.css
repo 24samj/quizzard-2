@@ -31,6 +31,8 @@
 @media (max-width: 768px) {
     .intro-container {
         width: 80%;
+        margin: auto;
+        margin-top: 10vh;
     }
 
     .intro-container {
