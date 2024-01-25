@@ -59,13 +59,4 @@
     .results-container {
         width: 80%;
     }
-
-    .btns-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btns-container button {
-        width: 100%;
-    }
 }
