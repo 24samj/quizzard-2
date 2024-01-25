@@ -4,6 +4,7 @@ import Preface from "../../components/Preface/Preface";
 import Gamebox from "../../components/Gamebox/Gamebox";
 import Results from "../../components/Results/Results";
 import "./QuizPage.css";
+import CategorySelection from "../../components/CategorySelection/CategorySelection";
 
 const QuizPage = () => {
     const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
@@ -13,12 +14,17 @@ const QuizPage = () => {
     const [currentScore, setCurrentScore] = useState(0);
     const [timeLeft, setTimeLeft] = useState(30000);
     const [questionSet, setQuestionSet] = useState(null);
+    const [categorySelected, setCategorySelected] = useState(null);
 
     useEffect(() => {
         setQuestionSet(
-            questionBank[Math.floor(Math.random() * questionBank.length)]
+            questionBank[categorySelected]?.[
+                Math.floor(
+                    Math.random() * questionBank[categorySelected]?.length
+                )
+            ]
         );
-    }, []);
+    }, [categorySelected]);
 
     const handleQuestionChange = () => {
         if (currentQuestionNumber < 4) {
@@ -48,27 +54,34 @@ const QuizPage = () => {
 
     return (
         <div className="quizpage-container">
-            {!gameStarted && !quizSubmitted && (
-                <Preface setGameStarted={setGameStarted} />
-            )}
-            {gameStarted && !quizSubmitted && (
-                <Gamebox
-                    currentQuestionNumber={currentQuestionNumber}
-                    questionSet={questionSet}
-                    selectedOption={selectedOption}
-                    setSelectedOption={setSelectedOption}
-                    handleQuestionChange={handleQuestionChange}
-                    timeLeft={timeLeft}
-                />
-            )}
-            {quizSubmitted && (
-                <Results
-                    currentScore={currentScore}
-                    setCurrentScore={setCurrentScore}
-                    setCurrentQuestionNumber={setCurrentQuestionNumber}
-                    setQuizSubmitted={setQuizSubmitted}
-                    setGameStarted={setGameStarted}
-                />
+            {!categorySelected ? (
+                <CategorySelection setCategorySelected={setCategorySelected} />
+            ) : (
+                <>
+                    {!gameStarted && !quizSubmitted && (
+                        <Preface setGameStarted={setGameStarted} />
+                    )}
+                    {gameStarted && !quizSubmitted && (
+                        <Gamebox
+                            currentQuestionNumber={currentQuestionNumber}
+                            questionSet={questionSet}
+                            selectedOption={selectedOption}
+                            setSelectedOption={setSelectedOption}
+                            handleQuestionChange={handleQuestionChange}
+                            timeLeft={timeLeft}
+                        />
+                    )}
+                    {quizSubmitted && (
+                        <Results
+                            currentScore={currentScore}
+                            setCurrentScore={setCurrentScore}
+                            setCurrentQuestionNumber={setCurrentQuestionNumber}
+                            setQuizSubmitted={setQuizSubmitted}
+                            setGameStarted={setGameStarted}
+                            setCategorySelected={setCategorySelected}
+                        />
+                    )}
+                </>
             )}
         </div>
     );

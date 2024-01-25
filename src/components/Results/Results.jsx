@@ -7,13 +7,14 @@ const Results = ({
     setCurrentQuestionNumber,
     setQuizSubmitted,
     setGameStarted,
+    setCategorySelected,
 }) => {
     const navigate = useNavigate();
     const handleReset = () => {
         setCurrentQuestionNumber(0);
         setCurrentScore(0);
         setQuizSubmitted(false);
-        setGameStarted(true);
+        setGameStarted(false);
     };
     return (
         <div className="results-container">
@@ -30,8 +31,19 @@ const Results = ({
                 <h1>{currentScore}/5</h1>
             </div>
             <div className="btns-container">
-                <button onClick={() => handleReset()}>Play Again</button>
-                <button onClick={() => navigate("/")}>Go Back Home</button>
+                <div className="row">
+                    <button onClick={() => handleReset()}>Play Again</button>
+                    <button onClick={() => navigate("/")}>Go Back Home</button>
+                </div>
+                <div className="row">
+                    <button
+                        onClick={() => {
+                            handleReset();
+                            setCategorySelected(null);
+                        }}>
+                        Choose another category
+                    </button>
+                </div>
             </div>
         </div>
     );
