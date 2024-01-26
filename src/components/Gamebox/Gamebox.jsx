@@ -45,7 +45,7 @@ const Gamebox = ({
             </div>
             <div
                 className="timebar"
-                style={{ width: `${(timeLeft / 30000) * 100}%` }}></div>
+                style={{ width: `${(timeLeft / 30) * 100}%` }}></div>
         </div>
     );
 };

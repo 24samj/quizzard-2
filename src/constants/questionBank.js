@@ -833,22 +833,17 @@ export const questionBank = {
                 },
                 {
                     question:
-                        "What is the value of $$pi$$ up to two decimal places?",
+                        "What is the value of 𝝅 up to two decimal places?",
                     options: ["3.14", "3.15", "3.16", "3.17"],
                 },
                 {
-                    question: "What is the derivative of $$2x^2$$?",
+                    question: "What is the derivative of 2x^2?",
                     options: ["2x", "4x", "x^2", "None of the Above"],
                 },
                 {
                     question:
                         "What is the circumference of a circle with radius r?",
-                    options: [
-                        "$$2pi r$$",
-                        "$$pi r^2$$",
-                        "$$pi r$$",
-                        "None of the Above",
-                    ],
+                    options: ["2𝝅r", "𝝅r^2", "𝝅r", "None of the Above"],
                 },
             ],
             answers: ["option2", "option2", "option1", "option2", "option1"],

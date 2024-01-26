@@ -12,7 +12,7 @@ const QuizPage = () => {
     const [quizSubmitted, setQuizSubmitted] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null);
     const [currentScore, setCurrentScore] = useState(0);
-    const [timeLeft, setTimeLeft] = useState(30000);
+    const [timeLeft, setTimeLeft] = useState(30);
     const [questionSet, setQuestionSet] = useState(null);
     const [categorySelected, setCategorySelected] = useState(null);
 
@@ -36,7 +36,7 @@ const QuizPage = () => {
         if (questionSet.answers[currentQuestionNumber] === selectedOption) {
             setCurrentScore(currentScore + 1);
         }
-        setTimeLeft(30000);
+        setTimeLeft(30);
         setSelectedOption(null);
     };
 
@@ -46,8 +46,8 @@ const QuizPage = () => {
         if (!timeLeft) handleQuestionChange();
 
         const intervalId = setInterval(() => {
-            setTimeLeft((timeLeft) => timeLeft - 100);
-        }, 100);
+            setTimeLeft((timeLeft) => timeLeft - 1);
+        }, 1000);
 
         return () => clearInterval(intervalId);
     }, [timeLeft, gameStarted]);

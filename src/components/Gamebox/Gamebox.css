@@ -78,7 +78,7 @@
     width: 90px;
     color: var(--main-text-color);
     background-color: var(--main-btn-bg-color);
-    border: 1px solid var(--main-border-color);
+    border: 2px solid var(--main-border-color);
     border-radius: 15px;
     font-size: 16px;
     cursor: pointer;
@@ -91,6 +91,7 @@
 .timebar {
     height: 2px;
     background-color: green;
+    transition: 1s all linear;
 }
 
 input[type="radio"] {
