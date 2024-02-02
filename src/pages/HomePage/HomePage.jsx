@@ -8,12 +8,12 @@ const HomePage = () => {
             <div className="intro-container">
                 <h2>Welcome to Quizzard</h2>
                 <p>
-                    Welcome to Quizzard, your go-to platform for fun and
-                    engaging quizzes. Our app, built with React, offers a wide
-                    range of quizzes on various topics. Whether you're looking
-                    to test your knowledge or simply pass the time, Quizzard has
-                    something for everyone. So why wait? Click 'Play a Quiz' and
-                    start your quizzing journey today!
+                    Your go-to platform for fun and engaging quizzes. Our app,
+                    built with React, offers a wide range of quizzes on various
+                    topics. Whether you're looking to test your knowledge or
+                    simply pass the time, Quizzard has something for everyone.
+                    So why wait? Click 'Play a Quiz' and start your quizzing
+                    journey today!
                 </p>
                 <div className="btn-container">
                     <button

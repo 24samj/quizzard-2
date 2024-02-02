@@ -5,6 +5,11 @@
     margin-top: 170px;
 }
 
+.intro-container h2 {
+    font-size: 36px;
+    font-weight: 800;
+}
+
 .intro-container h2,
 .intro-container p {
     margin-bottom: 50px;

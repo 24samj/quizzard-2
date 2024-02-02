@@ -24,7 +24,7 @@ const QuizPage = () => {
                 )
             ]
         );
-    }, [categorySelected]);
+    }, [categorySelected, gameStarted]);
 
     const handleQuestionChange = () => {
         if (currentQuestionNumber < 4) {

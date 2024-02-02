@@ -24,6 +24,7 @@ const Gamebox = ({
                                     ? "selected"
                                     : ""
                             }>
+                            <div className="box">✔</div>
                             <input
                                 name="option"
                                 type="radio"

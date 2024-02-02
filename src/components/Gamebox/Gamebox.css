@@ -33,11 +33,10 @@
     width: 100%;
     height: 60px;
     cursor: pointer;
-    padding-left: 10px;
     position: relative;
     overflow: hidden;
     transition: 0.1s all ease;
-    z-index: 10;
+    z-index: 2;
 }
 .options-container label::before {
     content: "";
@@ -61,9 +60,35 @@
     margin-right: 0.5rem;
 }
 
-.selected {
+.options-container span {
+    padding-left: 10px;
+}
+
+.box {
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    color: var(--main-text-color);
+    transition: 0.2s all ease;
+    z-index: 2;
+}
+
+.options-container .selected {
     transition: 0.2s all ease;
     background-color: var(--option-selected-bg-color);
+}
+.options-container .selected > .box {
+    background-color: var(--input-box-color);
+}
+.options-container .selected:hover {
+    scale: none;
+}
+.options-container .selected:hover::before {
+    width: 0%;
 }
 
 .game-footer {
@@ -89,7 +114,8 @@
 }
 
 .timebar {
-    height: 2px;
+    height: 6px;
+    border-radius: 10px;
     background-color: green;
     transition: 1s all linear;
 }

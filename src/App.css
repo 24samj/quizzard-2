@@ -1,11 +1,12 @@
 .dark {
     --main-text-color: white;
     --main-bg-color: rgb(26, 9, 56);
-    --secondary-bg-color: rgb(18, 39, 89);
+    --secondary-bg-color: rgb(25, 55, 115);
     --main-border-color: orange;
     --main-btn-bg-color: rgb(58, 20, 125);
     --option-selected-bg-color: rgb(26, 9, 100);
     --option-selected-slide-color: rgba(26, 9, 100, 0.5);
+    --input-box-color: rgb(0, 106, 255);
 }
 
 .light {
@@ -13,9 +14,10 @@
     --main-bg-color: rgb(252, 235, 255);
     --secondary-bg-color: rgb(243, 184, 252);
     --main-border-color: rgb(23, 0, 106);
-    --main-btn-bg-color: rgb(241, 169, 252);
+    --main-btn-bg-color: rgba(241, 169, 252, 0.75);
     --option-selected-bg-color: rgb(248, 207, 255);
     --option-selected-slide-color: rgba(248, 207, 255, 0.5);
+    --input-box-color: rgb(221, 0, 255);
 }
 
 body {
